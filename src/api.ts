@@ -5,7 +5,6 @@ import * as bitcoin from "bitcoinjs-lib";
 import { TxInput, TxUnspent, UnspentOutput } from "./models/tx-unspent";
 import * as bip39 from "bip39";
 import * as bip32 from "bip32";
-import bs58 from "bs58";
 
 export const getTxHistory = async (address: string) => {
   const url = `https://blockchain.info/address/${address}?format=json`;
@@ -24,7 +23,6 @@ export const getAccount = (phrase: string, path = "m/44'/0'/0'/0/0") => {
   const accountInfo = {
     address,
     privateKey,
-    publicKey: bs58.encode(child.publicKey),
     mnemonic,
     path,
   };
