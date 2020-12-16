@@ -10,7 +10,6 @@ interface Env {
   ACCOUNT_2_ADDRESS: string;
   ACCOUNT_2_WIF: string;
   SATOSHI_ADDRESS: string;
-  SATOSHI_TX_COUNT: string;
 }
 
 dotenv.config();
